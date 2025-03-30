@@ -7,7 +7,7 @@ from deepface import DeepFace
 import pandas as pd
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}}) 
 
 # Load movie dataset
 df = pd.read_csv("./hollywood.csv")
